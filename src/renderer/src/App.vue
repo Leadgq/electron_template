@@ -1,9 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
-    <el-button>anniu </el-button>
-  </div>
+  <div>渲染进程</div>
 </template>
 
 <style lang="less"></style>
