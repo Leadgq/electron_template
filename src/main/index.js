@@ -4,13 +4,17 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import { createMenu } from './menu'
 
+/***
+ *  @description: Create a window
+ *  @author: gaoqiang 2643336540@qq.com
+ */
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 900,
     height: 670,
     show: false,
-    autoHideMenuBar: false, // 自定义menu时，需要设置为false
+    autoHideMenuBar: true, //When customizing a menu, it needs to be set to false
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
@@ -34,7 +38,7 @@ function createWindow() {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
   }
-
+  // Create the Application's main menu
   createMenu(mainWindow)
 }
 
