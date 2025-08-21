@@ -8,6 +8,14 @@ An Electron application with Vue
 
 ## Project Setup
 
+```bash
+$ npm i electron-vite-auto-cli -g  
+```
+
+```bash
+ $ electron-vite-auto-cli  create
+```
+
 ### Install
 
 ```bash
